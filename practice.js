@@ -1,4 +1,4 @@
-/* 
+/*
   Once you complete a problem, refresh ./SpecRunner.html in your browser and check to see if the problem's test(s) are passing.
   Passed tests will be indicated by a green circle.
   Failed tests will be indicated by a red X.
@@ -9,24 +9,36 @@
 ////////// PROBLEM 1 //////////
 
 /*
-  Create an object called me. 
-  Give it a key of name with the value being your name, and another key of age with the value being your age. 
+  Create an object called me.
+  Give it a key of name with the value being your name, and another key of age with the value being your age.
   Then alert your name using dot notation.
 */
 
 //Code here
+var me = {
+  name: "Samuel",
+  age : 22
+}
+// alert(me.name);
 
 
 
 ////////// PROBLEM 2 //////////
 
 /*
-  Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. 
+  Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday.
   Have the values to those keys be your favorite thing in that category.
 */
 
 //Code here
-
+var favoriteThings = {
+  band : "Coldplay",
+  food : "french fries",
+  person : "Amanda",
+  book : "Ender's Game",
+  movie : "Emporer's New Groove",
+  holiday : "Christmas"
+}
 
 
 /*
@@ -34,7 +46,8 @@
 */
 
 //Code here
-
+favoriteThings.car = "Golf cart";
+favoriteThings.brand = "Dr. Pepper";
 
 
 /*
@@ -42,21 +55,27 @@
 */
 
 //Code here
-
+favoriteThings.food = "Chicken Nuggets";
+favoriteThings.book = "Harry Potter";
 
 
 ////////// PROBLEM 3 //////////
 
-/* 
-  Create an empty Object called backPack. 
-  Now, create a variable called 'item' and set it equal to the string 'firstPocket'. 
+/*
+  Create an empty Object called backPack.
+  Now, create a variable called 'item' and set it equal to the string 'firstPocket'.
   Using bracket notation, add a 'firstPocket' key (or property) to backPack, using 'item'.
   Set the value of that key to 'chapstick'.
-  Using dot notation, add another key (or property) to your backPack object that is named color, with the value being the color of your backpack. 
+  Using dot notation, add another key (or property) to your backPack object that is named color, with the value being the color of your backpack.
 */
 
 //Code here
+var backPack = {
 
+}
+var item = "firstPocket";
+backPack[item] = "chapstick";
+backPack.color = "Gray";
 
 
 /*
@@ -64,17 +83,18 @@
 */
 
 //Code here
+// alert(backPack);
 
 
 
 /*
 You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
-Instead, console.log your whole backPack object and then check out the console. 
+Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
-
+console.log(backPack);
 
 
 ////////// PROBLEM 4 //////////
@@ -90,14 +110,15 @@ var user2 = {
 };
 // Do not edit the code above.
 
-/* 
+/*
   Let's say I, the user, decided to change my name and email address to the following:
-  name -> 'Tyler S. McGinnis' and email -> 'tyler.mcginnis@devmounta.in'. 
+  name -> 'Tyler S. McGinnis' and email -> 'tyler.mcginnis@devmounta.in'.
   Make that change without modifying the original object code above.
 */
 
 //Code Here
-
+user2.name = "Tyler S. McGinnis";
+user2.email = "tyler.mcginnis@devmounta.in";
 
 
 
@@ -120,16 +141,23 @@ var user2 = {
 */
 
 //Code Here
+var methodCollection = {
 
+}
 
 
 /*
-  Now add two methods (functions that are properties on objects) to your methodCollection object. 
-  One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console. 
+  Now add two methods (functions that are properties on objects) to your methodCollection object.
+  One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
 
 //Code Here
-
+methodCollection.alertHello = function(){
+  alert("hello");
+}
+methodCollection.logHello = function(){
+  console.log("hello");
+}
 
 
 /*
@@ -137,18 +165,26 @@ var user2 = {
 */
 
 //Code Here
-
+// methodCollection.alertHello();
+methodCollection.logHello();
 
 
 ////////// PROBLEM 6 //////////
 
-/* 
-  Create a function called makePerson which takes in name, birthday, ssn as its parameters. 
+/*
+  Create a function called makePerson which takes in name, birthday, ssn as its parameters.
   Return a new object with all of the information that you passed in.
 */
 
 //Code Here
-
+function makePerson(name, birthday, ssn){
+  var person = {
+    name : name,
+    birthday : birthday,
+    ssn : ssn
+  };
+  return person;
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -159,5 +195,11 @@ var user2 = {
 */
 
 //Code Here
-
-
+function makeCard(cardNumber, expirationDate, securityCode){
+  var card = {
+    cardNumber : cardNumber,
+    expirationDate : expirationDate,
+    securityCode : securityCode
+  }
+  return card;
+}
